@@ -1,13 +1,26 @@
+:root {
+  --primary-color: #495e57;
+  --secondary-color-1: #f4ce14;
+  --secondary-color-2: #ee9972;
+  --secondary-color-3: #fbdabb;
+  --highlight-color-1: #edefee;
+  --highlight-color-2: #333333;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --headline-font: 'Markazi Text';
+  --body-font: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+}
+
 body {
+  background-color: var(--color-white);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--body-font, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: var(--headline-font, serif);
+  margin: 0;
 }

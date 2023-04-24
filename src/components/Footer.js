@@ -4,25 +4,28 @@ import SocialNav from "./navs/Social";
 export default function Footer() {
   return (
     <footer>
+      <div className="container">
 
-      <img src="https://via.placeholder.com/150" alt="Vertical logo" />
+        <img src="https://via.placeholder.com/150" alt="Vertical logo" />
 
-      <h4>Doormat Navigation</h4>
-      <DoormatNav />
+        <div>
+          <h4>Doormat Navigation</h4>
+          <DoormatNav />
+        </div>
 
-      <h4>Contact</h4>
-      Address<br />
-      Phone number<br />
-      Email
+        <div>
+          <h4>Contact</h4>
+          Chicago, Illinois<br />
+          8418-555-1212<br />
+          contact@littlelemon.com
+        </div>
 
-      <h4>Social Media Links</h4>
-      <SocialNav />
+        <div>
+          <h4>Social Media Links</h4>
+          <SocialNav />
+        </div>
 
+      </div>
     </footer>
   );
 }
-
-// Contact info
-// Links to social-media
-// Doormat navigation
-// Logo
