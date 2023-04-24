@@ -1,5 +1,5 @@
-import DoormatNav from "../navs/Doormat";
-import SocialNav from "../navs/Social";
+import DoormatNav from "./navs/Doormat";
+import SocialNav from "./navs/Social";
 
 export default function Footer() {
   return (
