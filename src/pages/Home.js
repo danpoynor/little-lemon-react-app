@@ -1,7 +1,7 @@
-import Hero from '../components/SectionHero';
-import SectionHighlights from '../components/SectionHighlights';
-import SectionTestimonials from '../components/SectionTestionials';
-import SectionAbout from '../components/SectionAbout';
+import Hero from '../sections/Hero';
+import SectionHighlights from '../sections/Highlights';
+import SectionTestimonials from '../sections/Testimonials';
+import SectionAbout from '../sections/About';
 
 export default function Home() {
   return (
