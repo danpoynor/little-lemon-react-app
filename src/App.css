@@ -60,8 +60,10 @@ header {
 }
 
 header .logo img {
-  max-width: 200px;
+  max-width: 180px;
 }
+
+/* Hamburger Menu */
 
 header .hamburger-nav {
   cursor: pointer;
@@ -81,9 +83,9 @@ header nav .show {
 }
 
 header nav {
-  background-color: var(--secondary-color-3);
+  background-color: var(--highlight-color-1);
   position: absolute;
-  top: 110px;
+  top: 82px;
   left: 0;
   width: 100%;
 }
@@ -91,6 +93,11 @@ header nav {
 header nav a {
   display: block;
   padding: 1.5rem 1rem;
+}
+
+header nav a:hover {
+  background-color: var(--highlight-color-2);
+  color: var(--color-white);
 }
 
 header nav li:not(:first-of-type) {
@@ -306,7 +313,7 @@ footer .social-nav li a {
 
 footer .social-nav li img {
   margin-right: .5rem;
-  max-width: 24px;
+  max-width: 18px;
 }
 
 /* Pages */
@@ -320,6 +327,10 @@ footer .social-nav li img {
   flex-flow: column nowrap;
 }
 
+.page-content {
+  min-height: 400px;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 980px) {
@@ -327,8 +338,9 @@ footer .social-nav li img {
     background-color: red;
   } */
 
-  header .hamburger-nav {
-    display: none !important;
+  header .hamburger-nav,
+  header .order-online {
+    display: none;
   }
 
   header nav {

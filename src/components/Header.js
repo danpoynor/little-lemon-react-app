@@ -7,8 +7,23 @@ export default function Header() {
 
   function hamburgerClick() {
     setShowNav(!showNav);
-    // alert("clicked!")
   }
+
+// If header nav exists, hide it when it's clicked
+const headerNav = document.querySelector("header nav");
+if (headerNav) {
+  headerNav.addEventListener("click", function() {
+    hamburgerClick();
+  });
+}
+
+// If footer nav exists, hide the header nav when it's clicked
+const footerNav = document.querySelector("footer nav");
+if (footerNav) {
+  footerNav.addEventListener("click", function() {
+    setShowNav(false);
+  });
+}
 
   return (
     <header>

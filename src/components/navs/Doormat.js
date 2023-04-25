@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function DoormatNav() {
   return (
-    <ul>
+    <ul className="doormat">
       <li><Link to="/" className="nav-item">Home</Link></li>
       <li><Link to="/about" className="nav-item">About</Link></li>
       <li><Link to="/menu" className="nav-item">Menu</Link></li>

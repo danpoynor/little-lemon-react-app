@@ -10,7 +10,9 @@ export default function Footer() {
 
         <div>
           <h4>Doormat Navigation</h4>
-          <DoormatNav />
+          <nav>
+            <DoormatNav />
+          </nav>
         </div>
 
         <div>
