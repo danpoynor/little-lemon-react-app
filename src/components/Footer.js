@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import DoormatNav from "./navs/Doormat";
 import SocialNav from "./navs/Social";
 
@@ -6,10 +7,12 @@ export default function Footer() {
     <footer>
       <div className="container">
 
-        <img src="https://via.placeholder.com/150" alt="Vertical logo" />
+        <Link to="/" className="logo">
+          <img src={require('../assets/logos/little-lemon-logo-vert.svg').default} alt="Little Lemon logo" />
+        </Link>
 
         <div>
-          <h4>Doormat Navigation</h4>
+          <h4>Navigation</h4>
           <nav>
             <DoormatNav />
           </nav>
@@ -18,12 +21,12 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           Chicago, Illinois<br />
-          8418-555-1212<br />
+          312-555-1212<br />
           contact@littlelemon.com
         </div>
 
         <div>
-          <h4>Social Media Links</h4>
+          <h4>Social Media</h4>
           <SocialNav />
         </div>
 

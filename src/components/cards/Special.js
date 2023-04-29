@@ -1,5 +1,9 @@
 import {Link} from 'react-router-dom';
 
+// bruschetta.jpg
+// greek-salad.jpg
+// lemon-dessert.jpg
+
 export default function SpecialCard(props) {
   return (
     <article className="menu-card">

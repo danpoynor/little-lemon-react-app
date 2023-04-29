@@ -34,9 +34,9 @@ export default function SocialNav() {
       {socialmedia.map(({ id, name, href, title, icon }) => {
         return (
           <li key={id}>
-            <a href={href} title={title} rel="noreferrer noopener">
+            <Link to={href}>
               <img src={icon} alt={name} /> {name}
-            </a>
+            </Link>
           </li>
         )
       })}
