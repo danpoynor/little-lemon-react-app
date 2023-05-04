@@ -16,6 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm run test -- --coverage --watchAll",
+    "test:only-changed": "npm run test -- --onlyChanged",
+    "test:verbose": "react-scripts test --detectOpenHandles --silent=false --verbose=true",
+    "test:verbose-only-changed": "react-scripts test --detectOpenHandles --silent=false --verbose=true --onlyChanged",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

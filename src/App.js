@@ -1,23 +1,17 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
-import BookingPage from "./pages/BookingPage";
+import Booking from "./pages/Booking";
 import OrderOnline from "./pages/OrderOnline";
 import Login from "./pages/Login";
 import FeedbackForm from "./components/forms/FeedbackForm";
-import ReservationConfirmation from "./pages/ReservationConfirmation";
+import ConfirmedBooking from "./pages/ConfirmedBooking";
 import NoPage from "./pages/NoPage";
 import './App.css';
 
 export default function App() {
-  const [isModal,setIsModal] = useState(false);
-
-  const handleSubmit = () => {
-    console.log("Feedback submitted");
-  }
 
   return (
     <Routes>
@@ -25,11 +19,11 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="menu" element={<Menu />} />
-        <Route path="reservations" element={<BookingPage />} />
-        <Route path="reservations/confirmation" element={<ReservationConfirmation />} />
+        <Route path="reservations" element={<Booking />} />
+        <Route path="reservations/confirmation" element={<ConfirmedBooking />} />
         <Route path="order-online" element={<OrderOnline />} />
         <Route path="login" element={<Login />} />
-        <Route path="feedback" element={<FeedbackForm onSubmit={handleSubmit} />} />
+        <Route path="feedback" element={<FeedbackForm />} />
         <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>

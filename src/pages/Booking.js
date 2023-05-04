@@ -1,48 +1,32 @@
 import { useState, useReducer } from "react";
+import { useNavigate } from 'react-router-dom';
 import BookingForm from "../components/forms/BookingForm";
+import { availableTimesReducer } from "../reducers/availableTimes";
+import { submitAPI } from "../utilities/fakeApi.js";
 
-const initializeTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]
-
-function timeReducer(state: FormState, action: Action) {
-  switch (action.type) {
-    case 'date_changed' : {
-      // Update hours for reservations depending on selected day of week.
-      // Friday (4) or Saturday (5), 10am to 11pm for lunch and dinner.
-      // Other days are from 5pm to 10pm (initial values) for dinner only.
-      const dt = new Date(action.payload);
-      const dayOfWeek = dt.getDay();
-
-      if (dayOfWeek && dayOfWeek === 4 || dayOfWeek === 5) {
-        return {
-          date: action.payload,
-          availableTimes: ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]}
-      } else {
-        return {
-          date: action.payload,
-          availableTimes: initializeTimes};
-      }
-    }
-    default: {
-      throw Error('Unknown action: ' + action.type);
-    }
-  }
-}
-
-export default function BookingPage({ times }) {
-  const [state, dispatch] = useReducer(timeReducer, {
+export default function Booking({ times }) {
+  const [availableTimes, setAvailableTimes] = useState([]);
+  const [state, dispatch] = useReducer(availableTimesReducer, {
     date: "",
     availableTimes: []
   })
   const [guests, setGuests] = useState(2);
   const [occasion, setOccasion] = useState("");
   const [time, setTime] = useState();
+  const navigate = useNavigate();
 
-  function dateHandler(target) {
-    setTime();
-    dispatch({
-      type: 'date_changed',
-      payload: target.value
-    });
+  // Create a function named updateTimes which will handle the state change.
+  // This function will change the availableTimes based on the selected date.
+  // Using async/await so the times are rerendered after the state is updated.
+  async function updateTimes (target) {
+    // Include the newly selected date in the dispatch state parameter
+    state.date = target.value;
+
+    // dispatch to the availableTimesReducer
+    // which uses initializeTimes() to set an initial availableTimes state
+    // and then uses fetchAPI() to update the availableTimes state
+    await dispatch({ type: "date_changed", payload: state });
+    setAvailableTimes(state.availableTimes);
   }
 
   function timeHandler(target) {
@@ -57,6 +41,12 @@ export default function BookingPage({ times }) {
     setOccasion(target.value)
   }
 
+  function submitForm(data) {
+    if (submitAPI) {
+      navigate('/reservations/confirmation', { state: data });
+    }
+  }
+
   return (
     <div className="page reservations">
       <div className="container">
@@ -66,17 +56,20 @@ export default function BookingPage({ times }) {
         </div>
 
         <div className="page-content">
+
           <BookingForm
             date={state.date}
-            onDate={dateHandler}
+            onDate={updateTimes}
             availableTimes={state.availableTimes}
-            time={state.time}
+            time={time}
             onTime={timeHandler}
             guests={guests}
             onGuests={guestsHandler}
             occasion={occasion}
             onOccasion={occasionHandler}
+            submitForm={submitForm}
           />
+
           <div className="reservation-details">
             <h3>Your Reservation Details:</h3>
             <ul className="reservation-details-list">
