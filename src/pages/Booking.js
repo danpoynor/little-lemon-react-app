@@ -60,7 +60,7 @@ export default function Booking({ times }) {
           <BookingForm
             date={state.date}
             onDate={updateTimes}
-            availableTimes={state.availableTimes}
+            availableTimes={availableTimes}
             time={time}
             onTime={timeHandler}
             guests={guests}

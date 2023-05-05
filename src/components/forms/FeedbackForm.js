@@ -4,7 +4,6 @@ export default function FeedbackForm() {
   const [feedbackData, setFeedbackData] = useState({
     rating: "10",
     comment: "",
-    isFormValid: false,
     isSubmitting: false,
     prompt: "Submit Feedback",
   });
@@ -13,6 +12,14 @@ export default function FeedbackForm() {
 
   const handleDialog = () => {
     ref.current.showModal();
+  };
+
+  const handleFeedbackChange = (e) => {
+    const { name, value } = e.target;
+    setFeedbackData({
+      ...feedbackData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -44,15 +51,6 @@ export default function FeedbackForm() {
     });
     ref.current.close();
   }
-
-  const handleFeedbackChange = (e) => {
-    const { name, value } = e.target;
-    setFeedbackData({
-      ...feedbackData,
-      [name]: value,
-      isFormValid: Number(feedbackData.rating) >= 5 && feedbackData.comment.length >= 10,
-    });
-  };
 
   const textAreaPlaceholder = isDisabled
     ? "Please provide a comment explaining why the experience was not good. Minimum length is 10 characters."

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function BookingForm({
   date,
   time,
@@ -10,31 +12,39 @@ export default function BookingForm({
   onOccasion,
   submitForm,
 }) {
-  // Disable the submit button if the date and time are not selected.
+  const [reservationData, setReservationData] = useState({
+    date: "",
+    time: "",
+    guests: "2",
+    occasion: "",
+    isSubmitting: false,
+    prompt: "Make Your Reservation",
+  });
+
+  // Disable the submit button if the date or time have no value.
   const isDisabled = !date || !time;
 
-  function handleDate(event) {
-    onDate(event.target)
-  }
-
-  function handleTime(event) {
-    onTime(event.target)
-  }
-
-  function handleGuests(event) {
-    onGuests(event.target)
-  }
-
-  function handleOccasion(event) {
-    onOccasion(event.target)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    submitForm(data);
+  const handleReservationChange = (e) => {
+    const { name, value } = e.target;
+    setReservationData({
+      ...reservationData,
+      [name]: value,
+    });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setReservationData({
+      ...reservationData,
+      isSubmitting: true,
+      prompt: <><span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...</>,
+    });
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    submitForm(reservationData);
+  }
 
   return (
     <form className="form" onSubmit={handleSubmit} data-testid="booking-form">
@@ -46,7 +56,7 @@ export default function BookingForm({
           <input
             id="date"
             name="date"
-            onChange={handleDate}
+            onChange={(e) => {handleReservationChange(e); onDate(e.target)}}
             required
             type="date"
           />
@@ -57,9 +67,9 @@ export default function BookingForm({
           <select
             id="time"
             name="time"
-            onChange={handleTime}
+            onChange={(e) => {handleReservationChange(e); onTime(e.target)}}
             required
-            value={time}
+            value={reservationData.time}
           >
             {availableTimes.map((time, index) => {
               return (
@@ -78,11 +88,11 @@ export default function BookingForm({
             max="10"
             min="1"
             name="guests"
-            onChange={handleGuests}
+            onChange={(e) => {handleReservationChange(e); onGuests(e.target)}}
             placeholder="1"
             required
             type="number"
-            value={guests}
+            value={reservationData.guests}
           />
         </div>
 
@@ -91,8 +101,8 @@ export default function BookingForm({
           <select
             id="occasion"
             name="occasion"
-            onChange={handleOccasion}
-            value={occasion}
+            onChange={(e) => {handleReservationChange(e); onOccasion(e.target)}}
+            value={reservationData.occasion}
           >
             <option value="">Select...</option>
             <option value="Birthday">Birthday</option>
@@ -101,7 +111,15 @@ export default function BookingForm({
         </div>
 
         <div className="field-wrapper">
-          <input type="submit" disabled={isDisabled} value="Make Your Reservation" className="btn" name="submit-btn" />
+          <button
+            type="submit"
+            className="btn"
+            disabled={isDisabled}
+            name="submit-btn"
+            data-testid="feedback-form-submit-btn"
+          >
+            {reservationData.prompt}
+          </button>
         </div>
 
       </fieldset>
