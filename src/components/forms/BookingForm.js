@@ -10,6 +10,7 @@ export default function BookingForm({
   onTime,
   onGuests,
   onOccasion,
+  onSeatingPreference,
   submitForm,
 }) {
   const [reservationData, setReservationData] = useState({
@@ -17,6 +18,7 @@ export default function BookingForm({
     time: "",
     guests: "2",
     occasion: "",
+    seatingPreference: "",
     isSubmitting: false,
     prompt: "Make Your Reservation",
   });
@@ -26,6 +28,7 @@ export default function BookingForm({
 
   const handleReservationChange = (e) => {
     const { name, value } = e.target;
+
     setReservationData({
       ...reservationData,
       [name]: value,
@@ -42,7 +45,6 @@ export default function BookingForm({
     });
 
     await new Promise(resolve => setTimeout(resolve, 1000));
-
     submitForm(reservationData);
   }
 
@@ -108,6 +110,12 @@ export default function BookingForm({
             <option value="Birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
           </select>
+        </div>
+
+        <div className="field-wrapper radio-group">
+          <p className="input-group-label">Seating preference</p>
+          <label>Standard<input type="radio" name="seatingPreference" value="Standard" onChange={(e) => {handleReservationChange(e); onSeatingPreference(e.target)}} /></label>
+          <label>Outside<input type="radio" name="seatingPreference" value="Outside" onChange={(e) => {handleReservationChange(e); onSeatingPreference(e.target)}} /></label>
         </div>
 
         <div className="field-wrapper">

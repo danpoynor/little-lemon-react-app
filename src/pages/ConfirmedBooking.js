@@ -2,7 +2,8 @@ import { useLocation } from 'react-router-dom';
 
 export default function ConfirmedBooking() {
   const { state } = useLocation();
-  const { date, time, guests, occasion } = state || {};
+  const { date, time, guests, occasion, seatingPreference } = state || {};
+  console.log('state', state);
 
   const formattedDate = new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric", timeZone: 'UTC'})
 
@@ -10,7 +11,7 @@ export default function ConfirmedBooking() {
     guests > 1 ? 'people' : 'person'
   } on ${formattedDate} at ${time}${
     occasion ? ` for occasion ${occasion}` : ''
-  }`;
+  } ${seatingPreference ? `with ${seatingPreference} seating preference` : ''}`
 
   return (
     <div className="page">

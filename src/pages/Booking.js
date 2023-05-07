@@ -12,6 +12,7 @@ export default function Booking({ times }) {
   })
   const [guests, setGuests] = useState(2);
   const [occasion, setOccasion] = useState("");
+  const [seatingPreference, setSeatingPreference] = useState("");
   const [time, setTime] = useState();
   const navigate = useNavigate();
 
@@ -41,6 +42,10 @@ export default function Booking({ times }) {
     setOccasion(target.value)
   }
 
+  function seatingPreferenceHandler(target) {
+    setSeatingPreference(target.value)
+  }
+
   function submitForm(data) {
     if (submitAPI) {
       navigate('/reservations/confirmation', { state: data });
@@ -52,7 +57,7 @@ export default function Booking({ times }) {
       <div className="container">
         <div className="page-header">
           <h1>Reserve a table</h1>
-          <p>Have a wonderful time dining at our restaurant with your friends and family.</p>
+          <p>Find a table for any occasion. Have a wonderful time dining at our restaurant with your friends and family.</p>
         </div>
 
         <div className="page-content">
@@ -67,6 +72,7 @@ export default function Booking({ times }) {
             onGuests={guestsHandler}
             occasion={occasion}
             onOccasion={occasionHandler}
+            onSeatingPreference={seatingPreferenceHandler}
             submitForm={submitForm}
           />
 
@@ -94,6 +100,7 @@ export default function Booking({ times }) {
                   </g>
                   </svg> Number of diners: {guests}</li>
               <li>Occasion: {occasion}</li>
+              <li>Seating preference: {seatingPreference}</li>
             </ul>
           </div>
         </div>

@@ -465,6 +465,31 @@ textarea {
   margin: 8px 0;
 }
 
+select,
+label {
+  cursor: pointer;
+}
+
+.input-group-label {
+  margin-bottom: .75rem;
+}
+
+.radio-group input[type=radio] {
+  display: inline-block;
+  width: auto;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 240px;;
+}
+
+.radio-group label:not(:last-of-type) {
+  margin-bottom: .5rem;
+}
+
 /* Feedback Dialog */
 
 .btn-feedback {
