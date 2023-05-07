@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
 
         <Link to="/" className="logo">
-          <img src={require('../assets/logos/little-lemon-logo-vert.svg').default} alt="Little Lemon logo" />
+          <img src={require('../assets/logos/little-lemon-logo-vert-2.svg').default} alt="Little Lemon logo" />
         </Link>
 
         <div>
