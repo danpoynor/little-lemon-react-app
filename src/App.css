@@ -186,6 +186,12 @@ header .order-online img {
   flex-flow: row wrap;
 }
 
+/* Menu */
+
+.menu .container{
+  align-items: flex-start;
+}
+
 /* Menu Card */
 
 .menu-card {
