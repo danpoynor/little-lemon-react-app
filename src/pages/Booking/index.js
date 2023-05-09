@@ -1,8 +1,8 @@
 import { useState, useReducer } from "react";
 import { useNavigate } from 'react-router-dom';
-import BookingForm from "../components/forms/BookingForm";
-import { availableTimesReducer } from "../reducers/availableTimes";
-import { submitAPI } from "../utilities/fakeApi.js";
+import BookingForm from "../../components/forms/BookingForm";
+import { availableTimesReducer } from "../../reducers/availableTimes";
+import { submitAPI } from "../../utilities/fakeApi.js";
 
 export default function Booking({ times }) {
   const [availableTimes, setAvailableTimes] = useState([]);

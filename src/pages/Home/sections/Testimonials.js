@@ -1,4 +1,5 @@
-import TestimonialCard from "../../components/cards/Testimonial";
+import TestimonialCard from "../../../components/cards/Testimonial";
+import DataFetcher from "../../../utilities/DataFetcher";
 
 export default function SectionTestimonials() {
   return (

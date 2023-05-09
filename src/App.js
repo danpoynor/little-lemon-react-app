@@ -12,7 +12,6 @@ import NoPage from "./pages/NoPage";
 import './App.css';
 
 export default function App() {
-
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

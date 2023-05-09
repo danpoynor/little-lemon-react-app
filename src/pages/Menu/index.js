@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import MenuCard from '../../components/cards/Menu'
+
 export default function Menu() {
   const [menuItems, setMenuItems] = useState([])
 
@@ -26,9 +28,7 @@ export default function Menu() {
         <ul className="menu-items">
           {menuItems[0].appetizers.map((item) => (
             <li key={item.id}>
-              <h3>{item.name}</h3>
-              Description: {item.description}<br />
-              Price: ${item.price}
+              <MenuCard key={item.id} item={item} />
             </li>
           ))}
         </ul>
@@ -36,9 +36,7 @@ export default function Menu() {
         <ul className="menu-items">
           {menuItems[0].entrees.map((item) => (
             <li key={item.id}>
-              <h3>{item.name}</h3>
-              Description: {item.description}<br />
-              Price: ${item.price}
+              <MenuCard key={item.id} item={item} />
             </li>
           ))}
         </ul>
@@ -46,9 +44,7 @@ export default function Menu() {
         <ul className="menu-items">
           {menuItems[0].desserts.map((item) => (
             <li key={item.id}>
-              <h3>{item.name}</h3>
-              Description: {item.description}<br />
-              Price: ${item.price}
+              <MenuCard key={item.id} item={item} />
             </li>
           ))}
         </ul>
@@ -56,9 +52,7 @@ export default function Menu() {
         <ul className="menu-items">
           {menuItems[0].drinks.map((item) => (
             <li key={item.id}>
-              <h3>{item.name}</h3>
-              Description: {item.description}<br />
-              Price: ${item.price}
+              <MenuCard key={item.id} item={item} />
             </li>
           ))}
         </ul>

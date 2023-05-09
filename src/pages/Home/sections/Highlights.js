@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SpecialCard from "../../components/cards/Special";
+import SpecialCard from "../../../components/cards/Special";
 
 export default function SectionHighlights() {
   return (
