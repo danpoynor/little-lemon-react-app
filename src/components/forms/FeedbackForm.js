@@ -8,6 +8,8 @@ export default function FeedbackForm() {
     prompt: "Submit Feedback",
   });
   const ref = useRef(null);
+
+  // Disable the submit button if rating is less than 5 and comment length is less than 10 characters
   const isDisabled = Number(feedbackData.rating) < 5 && feedbackData.comment.length <= 10;
 
   const handleDialog = () => {

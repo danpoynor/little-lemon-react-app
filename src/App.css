@@ -8,6 +8,20 @@ img {
   padding: 0;
 }
 
+/* New CSS Text Level 4 feature */
+/* REF: https://developer.chrome.com/blog/css-text-wrap-balance/ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+.name,
+.description {
+  text-wrap: balance;
+}
+
 a {
   color: var(--color-black);
   font-weight: 700;
