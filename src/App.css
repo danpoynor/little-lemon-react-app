@@ -200,33 +200,116 @@ header .order-online img {
   flex-flow: row wrap;
 }
 
+/* Special Menu Items */
+
+.special-menu-items {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .special-menu-items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Special Menu Card */
+
+.special-menu-card {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .special-menu-card {
+    flex-flow: column nowrap;
+  }
+}
+
+.special-menu-card .photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+  content: '';
+  display: block;
+  height: 185px;
+  width: 185px;
+  min-width: 185px;
+}
+
+@media (min-width: 768px) {
+  .special-menu-card .photo {
+    width: 100%;
+  }
+}
+
+.special-menu-card .name-price {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.special-menu-card .name {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.special-menu-card .price {
+  color: var(--secondary-color-2);
+  font-size: 1.15rem;
+}
+
+.special-menu-card .order-for-delivery svg {
+  margin-left: .5rem;
+}
+
 /* Menu */
 
-.menu .container{
+.menu .container {
   align-items: flex-start;
 }
 
-/* Menu Items */
+.menu .container h2 {
+  margin-bottom: 1rem;
+}
+
+.menu .container ul + h2 {
+  margin-top: 2rem;
+}
 
 .menu-items {
-  display: flex;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
 }
 
 /* Menu Card */
 
 .menu-card {
-  width: 200px;
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
 }
 
-.menu-card > img {
-  height: 200px;
-  width:  200px;
-  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
-  outline: 1px solid red;
+.menu-card .photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-radius-md);
+  content: '';
+  display: block;
+  height: 185px;
+  width: 185px;
+  min-width: 185px;
 }
 
 .menu-card .info {
-  background-color: var(--highlight-color-1);
   padding: 1rem;
 }
 
@@ -236,7 +319,6 @@ header .order-online img {
 }
 
 .menu-card .description {
-  color: var(--color-white);
   font-size: 1rem;
   margin: .5rem 0;
 }
