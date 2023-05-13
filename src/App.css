@@ -278,7 +278,7 @@ header .order-online img {
   margin-bottom: 1rem;
 }
 
-.menu .container ul + h2 {
+.menu .menu-categories li:not(:first-of-type) h2 {
   margin-top: 2rem;
 }
 

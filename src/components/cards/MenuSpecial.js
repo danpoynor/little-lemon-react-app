@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-export default function MenuSpecialCard({item}) {
+export default function MenuSpecialCard({ item }) {
   return (
     <figure className="special-menu-card">
       <div className="photo" style={{ backgroundImage: `url(${item.image})` }}></div>

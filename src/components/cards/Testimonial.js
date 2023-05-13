@@ -1,6 +1,16 @@
-import RatingStars from "./RatingStars";
+import Star from '../../assets/icons/star.png';
 
-export default function TestimonialCard({item}) {
+export default function TestimonialCard({ item }) {
+  function RatingStars({ numStars }) {
+    const stars = [];
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push(<img src={Star} alt="star rating" className='star' key={i} />);
+    }
+
+    return stars;
+  }
+
   return (
     <article className="testimonial-card">
       <h3>Rating</h3>
@@ -13,9 +23,6 @@ export default function TestimonialCard({item}) {
         <p>Rating info</p>
         <RatingStars numStars={item.rating} />
       </div>
-
-      {/* Truncated review */}
-      {/* <p>{item.review.substring(0, 100)}...</p> */}
 
       <p className="description">{item.review}</p>
     </article>

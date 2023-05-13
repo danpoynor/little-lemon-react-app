@@ -1,22 +1,27 @@
-import { useEffect, useState } from 'react'
-
+import DataLoader from "../../utilities/DataLoader"
 import MenuCard from '../../components/cards/Menu'
 
 export default function Menu() {
-  const [menuItems, setMenuItems] = useState([])
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await fetch("data/menu.json")
-      const data = await response.json()
-      setMenuItems(data)
-    }
-    getData()
-  }, [])
-
-  if (!menuItems.length) {
-    return <div>Loading...</div>;
-  }
+  const renderMenu = (data) => {
+    return (
+      // For each category in data, except 'specials', render a <h2> with
+      // the category name and a list of items in that category.
+      <ul className="menu-categories">
+        {Object.keys(data)?.filter(category => category !== 'specials')?.map(category => (
+          <li key={category}>
+            <h2>{category.toLocaleUpperCase()}</h2>
+            <ul className="menu-items">
+              {data[category].map(item => (
+                <li key={item.id}>
+                  <MenuCard item={item} />
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   return (
     <div className="page menu">
@@ -24,38 +29,8 @@ export default function Menu() {
         <div className="section-header">
           <h1>Menu</h1>
         </div>
-        <h2>Appetizers</h2>
-        <ul className="menu-items">
-          {menuItems[0].appetizers.map((item) => (
-            <li key={item.id}>
-              <MenuCard key={item.id} item={item} />
-            </li>
-          ))}
-        </ul>
-        <h2>Entrees</h2>
-        <ul className="menu-items">
-          {menuItems[0].entrees.map((item) => (
-            <li key={item.id}>
-              <MenuCard key={item.id} item={item} />
-            </li>
-          ))}
-        </ul>
-        <h2>Desserts</h2>
-        <ul className="menu-items">
-          {menuItems[0].desserts.map((item) => (
-            <li key={item.id}>
-              <MenuCard key={item.id} item={item} />
-            </li>
-          ))}
-        </ul>
-        <h2>Drinks</h2>
-        <ul className="menu-items">
-          {menuItems[0].drinks.map((item) => (
-            <li key={item.id}>
-              <MenuCard key={item.id} item={item} />
-            </li>
-          ))}
-        </ul>
+        {/* Use render prop pattern to render the menu items */}
+        <DataLoader url="data/menu.json" render={renderMenu} />
       </div>
     </div>
   );

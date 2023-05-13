@@ -1,4 +1,4 @@
-export default function MenuCard ({item}) {
+export default function MenuCard ({ item }) {
   return (
     <figure className="menu-card">
       <div className="photo" style={{ backgroundImage: `url(${item.image})` }}></div>
