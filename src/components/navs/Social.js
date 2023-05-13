@@ -1,45 +1,22 @@
 import { Link } from "react-router-dom";
+import DataLoader from "../../utilities/DataLoader";
 
-import FacebookSVG from '../../assets/icons/facebook.svg';
-import InstagramSVG from '../../assets/icons/instagram.svg';
-import YelpSVG from '../../assets/icons/yelp.svg';
-
-const socialmedia = [
-  {
-    id: 1,
-    name: 'Facebook',
-    href: 'https://www.facebook.com',
-    title: 'Follow Little Lemon on Facebook',
-    icon: FacebookSVG,
-  },
-  {
-    id: 2,
-    name: 'Instagram',
-    href: 'https://www.instagram.com',
-    title: 'Follow Little Lemon on Instagram',
-    icon: InstagramSVG,
-  },
-  {
-    id: 3,
-    name: 'Yelp',
-    href: 'https://www.yelp.com',
-    title: 'Check out Little Lemon on Yelp',
-    icon: YelpSVG,
-  },
-];
-
-export default function SocialNav() {
-  return (
-    <ul className="social-nav">
-      {socialmedia.map(({ id, name, href, title, icon }) => {
-        return (
-          <li key={id}>
-            <Link to={href}>
-              <img src={icon} alt={name} /> {name}
+export default function DoormatNav() {
+  const renderSocialLinks = (data) => {
+    return (
+      <ul className="social-nav">
+        {data?.map(link => (
+          <li key={link.id}>
+            <Link to={link.url}>
+              <img src={`images/social-icons/${link.icon}`} alt={link.name} title={link.title} /> {link.name}
             </Link>
           </li>
-        )
-      })}
-    </ul>
+        ))}
+      </ul>
+    );
+  };
+
+  return (
+    <DataLoader url="data/links-social.json" render={renderSocialLinks} />
   )
 }

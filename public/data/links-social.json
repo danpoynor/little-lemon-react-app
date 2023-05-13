@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Facebook",
+    "url": "https://www.facebook.com",
+    "title": "Follow Little Lemon on Facebook",
+    "icon": "facebook.svg"
+  },
+  {
+    "id": 2,
+    "name": "Instagram",
+    "url": "https://www.instagram.com",
+    "title": "Follow Little Lemon on Instagram",
+    "icon": "instagram.svg"
+  },
+  {
+    "id": 3,
+    "name": "Yelp",
+    "url": "https://www.yelp.com",
+    "title": "Check out Little Lemon on Yelp",
+    "icon": "yelp.svg"
+  }
+]
