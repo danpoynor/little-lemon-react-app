@@ -450,12 +450,18 @@ header .order-online img {
 }
 
 .about .about-photos {
+  display: none;
+}
+
+@media (min-width: 768px) {
+.about .about-photos {
   position: relative;
   min-width: 50%;
   max-width: 50%;
   flex-basis: 50%;
   width: 50%;
   height: 342px;
+}
 }
 
 .about .about-photos img {
