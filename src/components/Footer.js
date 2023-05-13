@@ -7,25 +7,27 @@ export default function Footer() {
     <footer>
       <div className="container">
 
-        <Link to="/" className="logo">
-          <img src={require('../assets/logos/little-lemon-logo-vert-2.svg').default} alt="Little Lemon logo" />
-        </Link>
+        <div className="footer-logo">
+          <Link to="/" className="logo">
+            <img src={require('../assets/logos/little-lemon-logo-vert-2.svg').default} alt="Little Lemon logo" />
+          </Link>
+        </div>
 
-        <div>
+        <div className="doormap">
           <h4>Navigation</h4>
           <nav>
             <DoormatNav />
           </nav>
         </div>
 
-        <div>
+        <div className="contact">
           <h4>Contact</h4>
           Chicago, Illinois<br />
           312-555-1212<br />
           contact@littlelemon.com
         </div>
 
-        <div>
+        <div className="social">
           <h4>Social Media</h4>
           <SocialNav />
         </div>

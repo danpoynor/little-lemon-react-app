@@ -420,11 +420,11 @@ header .order-online img {
 }
 
 @media (min-width: 768px) {
-.about .section-header {
-  min-width: 50%;
-  max-width: 50%;
-  flex-basis: 50%;
-  width: 50%;
+  .about .section-header {
+    min-width: 50%;
+    max-width: 50%;
+    flex-basis: 50%;
+    width: 50%;
   }
 }
 
@@ -454,14 +454,14 @@ header .order-online img {
 }
 
 @media (min-width: 768px) {
-.about .about-photos {
-  position: relative;
-  min-width: 50%;
-  max-width: 50%;
-  flex-basis: 50%;
-  width: 50%;
-  height: 342px;
-}
+  .about .about-photos {
+    position: relative;
+    min-width: 50%;
+    max-width: 50%;
+    flex-basis: 50%;
+    width: 50%;
+    height: 342px;
+  }
 }
 
 .about .about-photos img {
@@ -485,17 +485,40 @@ footer {
 }
 
 footer .container {
+  display: grid;
   align-items: flex-start;
+  justify-content: flex-start;
+  grid-template-areas:
+    "logo nav"
+    "contact social";
+}
+
+@media (min-width: 768px) {
+  footer .container {
+    justify-content: space-between;
+    grid-template-areas:
+      "logo nav contact social";
+  }
+}
+
+footer .footer-logo {
+  grid-area: logo;
 }
 
 footer .logo {
   background-color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  display: inline-block;
   margin-top: 1rem;
   padding: .75rem
 }
 
 footer .logo img {
   width: 90px;
+}
+
+footer .doormap {
+  grid-area: nav;
 }
 
 footer nav a {
@@ -513,6 +536,14 @@ footer nav a:hover.active {
   background-color: var(--secondary-color-1);
   color: var(--color-black);
   cursor: default;
+}
+
+footer .contact {
+  grid-area: contact;
+}
+
+footer .social {
+  grid-area: social;
 }
 
 footer .social-nav li {
