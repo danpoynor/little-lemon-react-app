@@ -455,6 +455,7 @@ header .order-online img {
 
 @media (min-width: 768px) {
   .about .about-photos {
+    display: block;
     position: relative;
     min-width: 50%;
     max-width: 50%;
