@@ -4,34 +4,34 @@
     "name": "Maria",
     "rating": 3,
     "review": "I had the most amazing dining experience at this Mediterranean restaurant! The food was delicious, the service was exceptional, and the atmosphere was lovely. I highly recommend the lamb kebab and the baklava for dessert. This restaurant is definitely a must-try!",
-    "photo": "photos/customers/maria-s.jpg"
+    "photo": "images/photos/customers/maria-s.jpg"
   },
   {
     "id": 2,
     "name": "John",
     "rating": 5,
     "review": "Absolutely delicious! The hummus was smooth and creamy, the tabbouleh was fresh and flavorful, and the lamb kebab was cooked to perfection. The service was friendly and attentive, and the atmosphere was cozy and inviting. I can't wait to come back!",
-    "photo": "photos/customers/john-d.jpg"
+    "photo": "images/photos/customers/john-d.jpg"
   },
   {
     "id": 3,
     "name": "Sarah",
     "rating": 5,
     "review": "This restaurant exceeded my expectations! The food was absolutely delicious and authentic, and the prices were very reasonable. The restaurant had a cozy and inviting atmosphere, and the staff were friendly and welcoming. I highly recommend the falafel wrap and the hummus appetizer - they were both amazing!",
-    "photo": "photos/customers/sarah-l.jpg"
+    "photo": "images/photos/customers/sarah-l.jpg"
   },
   {
     "id": 4,
     "name": "Jane",
     "rating": 4,
     "review": "I had a great experience at this Mediterranean restaurant. The falafel was crispy and flavorful, and the baba ganoush was delicious. The service was prompt and friendly, and the prices were reasonable. The only downside was that the restaurant was a bit noisy, but overall it was a great dining experience.",
-    "photo": "photos/customers/jane-s.jpg"
+    "photo": "images/photos/customers/jane-s.jpg"
   },
   {
     "id": 5,
     "name": "Tom",
     "rating": 5,
     "review": "This is by far the best Mediterranean restaurant I've been to in the area. The food is fresh and authentic, the service is excellent, and the prices are very reasonable. I especially enjoyed the chicken shawarma and the stuffed grape leaves. Highly recommend!",
-    "photo": "photos/customers/tom-w.jpg"
+    "photo": "images/photos/customers/tom-w.jpg"
   }
 ]
