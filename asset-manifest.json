@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/little-lemon-react-app/static/css/main.a3d267f2.css",
-    "main.js": "/little-lemon-react-app/static/js/main.6f860b8a.js",
+    "main.js": "/little-lemon-react-app/static/js/main.6da0f6d0.js",
     "static/js/787.c8f079de.chunk.js": "/little-lemon-react-app/static/js/787.c8f079de.chunk.js",
     "static/media/mario-and-adrian-1.jpg": "/little-lemon-react-app/static/media/mario-and-adrian-1.d6988ff80ef36b25f17d.jpg",
     "static/media/mario-and-adrian-2.jpg": "/little-lemon-react-app/static/media/mario-and-adrian-2.532d91d1402d855d30b4.jpg",
@@ -12,11 +12,11 @@
     "static/media/basket.svg": "/little-lemon-react-app/static/media/basket.fae9b50adb46a3bfa9273d6c25dc3935.svg",
     "static/media/hamburger-menu.svg": "/little-lemon-react-app/static/media/hamburger-menu.0da6f67ced800ab909f63d5144de37ee.svg",
     "main.a3d267f2.css.map": "/little-lemon-react-app/static/css/main.a3d267f2.css.map",
-    "main.6f860b8a.js.map": "/little-lemon-react-app/static/js/main.6f860b8a.js.map",
+    "main.6da0f6d0.js.map": "/little-lemon-react-app/static/js/main.6da0f6d0.js.map",
     "787.c8f079de.chunk.js.map": "/little-lemon-react-app/static/js/787.c8f079de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3d267f2.css",
-    "static/js/main.6f860b8a.js"
+    "static/js/main.6da0f6d0.js"
   ]
 }
