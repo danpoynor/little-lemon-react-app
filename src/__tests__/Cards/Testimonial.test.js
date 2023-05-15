@@ -4,10 +4,17 @@ import TestimonialCard from "../../components/cards/Testimonial";
 import { BrowserRouter } from "react-router-dom";
 
 describe('TestimonialCard component', () => {
+  const item = {
+    name: "Testimonial",
+    description: "This is a testimonial",
+    rating: 5,
+    photo: "https://via.placeholder.com/150",
+  };
+
   test('it renders', () => {
     render(
       <BrowserRouter>
-        <TestimonialCard />
+        <TestimonialCard item={item} />
       </BrowserRouter>
     );
   });

@@ -84,9 +84,7 @@ describe('BookingPage component', () => {
     const inputElement = screen.getByLabelText(/Choose date/i)
     fireEvent.click(inputElement)
 
-    act(() => {
-      fireEvent.change(inputElement, { target: { value: futureDate } })
-    });
+    fireEvent.change(inputElement, { target: { value: futureDate } })
 
     expect(bookingForm).toHaveFormValues({ date: futureDate })
   });

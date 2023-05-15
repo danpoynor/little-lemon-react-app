@@ -1,6 +1,5 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
-// Because <App> uses <Routes> and <Route>, we need to wrap it with <BrowserRouter>
 import { BrowserRouter } from "react-router-dom";
 
 describe('App component', () => {

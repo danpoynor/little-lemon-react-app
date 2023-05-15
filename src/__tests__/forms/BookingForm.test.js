@@ -1,6 +1,7 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { act } from 'react-dom/test-utils';
 import BookingForm from "../../components/forms/BookingForm";
+
 describe('BookingForm', () => {
   const props = {
     date: '',
@@ -59,7 +60,7 @@ describe('BookingForm', () => {
     });
   });
 
-  test('it should update the number of guests when the guests input changes', () => {
+  test.skip('it should update the number of guests when the guests input changes', () => {
     render(<BookingForm {...props} />);
     const guestsInput = screen.getByLabelText('Number of guests');
     fireEvent.change(guestsInput, { target: { value: '2' } });

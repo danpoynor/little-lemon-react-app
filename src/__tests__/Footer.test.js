@@ -1,6 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Footer from "../components/Footer";
-// Because <Header> uses <Link>, we need to wrap it with <BrowserRouter>
 import { BrowserRouter } from "react-router-dom";
 
 describe('Footer component', () => {
