@@ -152,6 +152,46 @@ header .order-online img {
   width: 100%;
 }
 
+@media screen and (min-width: 980px) {
+  header .hamburger-nav,
+  header .order-online {
+    display: none;
+  }
+
+  header nav {
+    background-color: unset;
+    display: block !important;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+  }
+
+  header nav li:not(:first-of-type) {
+    border-top: none;
+  }
+
+  header nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav li:not(:first-of-type) {
+    margin-left: .25rem;
+  }
+
+  header nav a {
+    border-radius: .5rem;
+    padding: .5rem .66rem;
+  }
+
+  header nav a:hover {
+    background-color: var(--highlight-color-2);
+    color: var(--color-white);
+  }
+}
+
 /* Hero */
 
 .hero {
@@ -482,35 +522,46 @@ header .order-online img {
 
 footer {
   text-align: left;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 footer .container {
-  display: grid;
   align-items: flex-start;
   justify-content: flex-start;
-  grid-template-areas:
-    "logo nav"
-    "contact social";
+  flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  footer .container {
-    justify-content: space-between;
-    grid-template-areas:
-      "logo nav contact social";
-  }
-}
-
-footer .footer-logo {
+footer .logo-area {
   grid-area: logo;
+}
+
+footer .doormap-area {
+  grid-area: nav;
+}
+
+footer .contact-area  {
+  grid-area: contact;
+}
+
+footer .social-area  {
+  grid-area: social;
+}
+
+footer .content-area > div {
+  grid-area: content-area;
+  margin-bottom: 2rem;
+}
+
+footer h4 {
+  color: var(--secondary-color-2);
+  margin: 0 0 .5rem;
+  text-transform: uppercase;
 }
 
 footer .logo {
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
   display: inline-block;
-  margin-top: 1rem;
   padding: .75rem
 }
 
@@ -518,49 +569,75 @@ footer .logo img {
   width: 90px;
 }
 
-footer .doormap {
-  grid-area: nav;
+footer .doormap-area li,
+footer .social-area li {
+  margin-right: .5rem;
 }
 
-footer nav a {
+footer .doormap-area li:not(:first-child) {
+  margin-top: .25rem;
+}
+
+footer .social-area li:not(:first-child) {
+  margin-top: .5rem;
+}
+
+footer .doormap-area a {
   border-radius: var(--border-radius-sm);
   display: block;
   padding: .1rem .25rem;
 }
 
-footer nav a:hover {
+footer .doormap-area a:hover {
   background-color: var(--highlight-color-2);
   color: var(--secondary-color-1);
 }
 
-footer nav a.active,
-footer nav a:hover.active {
+footer .doormap-area a.active,
+footer .doormap-area a:hover.active {
   background-color: var(--secondary-color-1);
   color: var(--color-black);
   cursor: default;
 }
 
-footer .contact {
-  grid-area: contact;
+footer .social-nav a {
+  display: block;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-left: 24px;
 }
 
-footer .social {
-  grid-area: social;
+@media (min-width: 480px) {
+  footer .container {
+    flex-flow: row nowrap;
+  }
+
+  footer .content-area > div {
+    margin-bottom: 1.5rem;
+  }
+
+  footer .doormap-area li,
+  footer .social-area li {
+    display: inline-block;
+  }
 }
 
-footer .social-nav li {
-  margin-bottom: .5rem;
-}
+@media (min-width: 768px) {
+  footer .container {
+    gap: 3rem;
+  }
 
-footer .social-nav li a {
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-}
+  footer .content-area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-footer .social-nav li img {
-  margin-right: .5rem;
-  max-width: 18px;
+  footer .doormap-area li,
+  footer .social-area li {
+    display: block;
+  }
 }
 
 /* Pages */
@@ -815,46 +892,4 @@ label {
 
 @keyframes spinner-border {
   to { transform: rotate(360deg); }
-}
-
-/* Media Queries */
-
-@media screen and (min-width: 980px) {
-  header .hamburger-nav,
-  header .order-online {
-    display: none;
-  }
-
-  header nav {
-    background-color: unset;
-    display: block !important;
-    left: auto;
-    position: relative;
-    top: auto;
-    width: auto;
-  }
-
-  header nav li:not(:first-of-type) {
-    border-top: none;
-  }
-
-  header nav ul {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  header nav li:not(:first-of-type) {
-    margin-left: .25rem;
-  }
-
-  header nav a {
-    border-radius: .5rem;
-    padding: .5rem .66rem;
-  }
-
-  header nav a:hover {
-    background-color: var(--highlight-color-2);
-    color: var(--color-white);
-  }
 }

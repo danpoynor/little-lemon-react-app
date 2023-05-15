@@ -7,8 +7,14 @@ export default function DoormatNav() {
       <ul className="social-nav">
         {data?.map(link => (
           <li key={link.id}>
-            <Link to={link.url}>
-              <img src={`images/social-icons/${link.icon}`} alt={link.name} title={link.title} /> {link.name}
+            <Link
+              to={link.url}
+              style={{ backgroundImage: `url(images/social-icons/${link.icon})` }}
+              title={link.title}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.name}
             </Link>
           </li>
         ))}
