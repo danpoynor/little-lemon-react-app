@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "type": "link",
+    "name": "Home",
+    "url": "/",
+    "roles": ["public"]
+  },
+  {
+    "id": 2,
+    "type": "link",
+    "name": "About",
+    "url": "/about",
+    "roles": ["public"]
+  },
+  {
+    "id": 3,
+    "type": "link",
+    "name": "Menu",
+    "url": "/menu",
+    "roles": ["public"]
+  },
+  {
+    "id": 4,
+    "type": "link",
+    "name": "Reservations",
+    "url": "/reservations",
+    "roles": ["public"]
+  },
+  {
+    "id": 5,
+    "type": "link",
+    "name": "Order Online",
+    "url": "/order-online",
+    "roles": ["public"]
+  },
+  {
+    "id": 6,
+    "type": "link",
+    "name": "Login",
+    "url": "/login",
+    "roles": ["public"]
+  },
+  {
+    "id": 7,
+    "type": "link",
+    "name": "Admin",
+    "url": "/admin/dashboard",
+    "roles": ["admin"]
+  },
+  {
+    "id": 8,
+    "type": "link",
+    "name": "User Management",
+    "url": "/admin/user-mgmt",
+    "roles": ["admin"]
+  },
+  {
+    "id": 9,
+    "type": "link",
+    "name": "Site Analytics",
+    "url": "/admin/website-analytics",
+    "roles": ["admin"]
+  }
+]

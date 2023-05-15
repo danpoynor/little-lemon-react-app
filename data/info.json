@@ -1,0 +1,47 @@
+{
+  "name": "Mediterranean Grill",
+  "description": "A casual dining experience with a Mediterranean twist.",
+  "address": "123 Main Street",
+  "city": "Chicago",
+  "state": "IL",
+  "zip": "60601",
+  "phone": "(312) 555-1234",
+  "website": "http://www.example.com",
+  "hours": [
+    {
+      "day": "Monday",
+      "open": "11:00am",
+      "close": "10:00pm"
+    },
+    {
+      "day": "Tuesday",
+      "open": "11:00am",
+      "close": "10:00pm"
+    },
+    {
+      "day": "Wednesday",
+      "open": "11:00am",
+      "close": "10:00pm"
+    },
+    {
+      "day": "Thursday",
+      "open": "11:00am",
+      "close": "10:00pm"
+    },
+    {
+      "day": "Friday",
+      "open": "11:00am",
+      "close": "11:00pm"
+    },
+    {
+      "day": "Saturday",
+      "open": "11:00am",
+      "close": "11:00pm"
+    },
+    {
+      "day": "Sunday",
+      "open": "11:00am",
+      "close": "10:00pm"
+    }
+  ]
+}

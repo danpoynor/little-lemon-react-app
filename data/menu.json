@@ -1,0 +1,224 @@
+{
+  "specials": [
+    {
+      "id": 1,
+      "name": "Greek salad",
+      "description": "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ",
+      "price": 12.99,
+      "image": "images/photos/menu/greek-salad-300x200.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bruchetta",
+      "description": "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. ",
+      "price": 5.99,
+      "image": "images/photos/menu/bruschetta-300x200.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Lemon Dessert",
+      "description": "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+      "price": 5.00,
+      "image": "images/photos/menu/lemon-dessert-300x200.jpg"
+    }
+  ],
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Mediterranean Lemonade",
+      "description": "Freshly squeezed lemonade with a hint of rose water.",
+      "price": 3.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 2,
+      "name": "Turkish Coffee",
+      "description": "Strong, rich coffee brewed in the traditional Turkish style.",
+      "price": 4.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 3,
+      "name": "Mint Tea",
+      "description": "A refreshing herbal tea made with fresh mint leaves.",
+      "price": 2.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 4,
+      "name": "Pomegranate Juice",
+      "description": "Sweet and tart juice made from fresh pomegranates.",
+      "price": 4.99,
+      "image": "images/photos/placeholder-image.png"
+    }
+  ],
+  "appetizers": [
+    {
+      "id": 1,
+      "name": "Hummus",
+      "description": "A classic Mediterranean dip made with chickpeas, tahini, garlic, and lemon juice. Served with pita bread.",
+      "price": 6.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 2,
+      "name": "Baba Ghanoush",
+      "description": "Roasted eggplant dip with tahini, garlic, and lemon juice. Served with pita bread.",
+      "price": 7.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 3,
+      "name": "Falafel",
+      "description": "Crispy chickpea fritters, served with tahini sauce and a side salad.",
+      "price": 8.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 4,
+      "name": "Stuffed Grape Leaves",
+      "description": "Grape leaves stuffed with rice, herbs, and spices, served with tzatziki sauce.",
+      "price": 9.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 5,
+      "name": "Dolmades",
+      "description": "Stuffed grape leaves with rice, herbs, and spices. Served with tzatziki sauce.",
+      "price": 8.99,
+      "image": "images/photos/placeholder-image.png"
+    }
+  ],
+  "salads": [
+    {
+      "id": 1,
+      "name": "Tabbouleh",
+      "description": "A traditional Middle Eastern salad made with bulgur wheat, tomatoes, cucumbers, parsley, and mint.",
+      "price": 9.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 2,
+      "name": "Fattoush",
+      "description": "A refreshing salad made with lettuce, tomatoes, cucumbers, radishes, and crispy pita chips.",
+      "price": 9.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 3,
+      "name": "Mediterranean Salad",
+      "description": "Fresh lettuce, tomatoes, cucumbers, red onions, olives, and feta cheese. Served with a side of Greek dressing.",
+      "price": 10.99,
+      "image": "images/photos/placeholder-image.png"
+    }
+  ],
+  "entrees": [
+    {
+      "id": 1,
+      "name": "Lamb Kebab",
+      "description": "Grilled lamb skewers marinated in Mediterranean spices. Served with rice pilaf and grilled vegetables.",
+      "price": 18.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Shawarma",
+      "description": "Thinly sliced marinated chicken, wrapped in pita bread with lettuce, tomato, and tzatziki sauce. Served with a side of fries.",
+      "price": 14.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 3,
+      "name": "Beef Gyro",
+      "description": "Thinly sliced marinated beef, wrapped in pita bread with lettuce, tomato, and tzatziki sauce. Served with a side of fries.",
+      "price": 16.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 4,
+      "name": "Vegetarian Moussaka",
+      "description": "A vegetarian twist on the classic Greek dish. Layers of eggplant, potatoes, and zucchini, topped with a creamy bechamel sauce.",
+      "price": 18.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 5,
+      "name": "Mediterranean Grilled Fish",
+      "description": "Fresh fish marinated in Mediterranean spices and grilled to perfection. Served with a side of grilled vegetables.",
+      "price": 24.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 6,
+      "name": "Seafood Paella",
+      "description": "A classic Spanish dish made with saffron rice, shrimp, mussels, clams, and calamari.",
+      "price": 28.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 7,
+      "name": "Mixed Grill",
+      "description": "A hearty platter of grilled chicken, lamb, and beef, served with roasted vegetables and rice pilaf.",
+      "price": 32.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 8,
+      "name": "Mediterranean Stuffed Peppers",
+      "description": "Red bell peppers stuffed with seasoned ground beef, rice, and herbs, served with a side salad.",
+      "price": 22.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 9,
+      "name": "Vegetarian Moussaka",
+      "description": "A vegetarian twist on the classic Greek dish. Layers of eggplant, potatoes, and zucchini, topped with a creamy bechamel sauce.",
+      "price": 18.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 10,
+      "name": "Falafel Platter",
+      "description": "Crispy chickpea fritters served with tahini sauce, rice pilaf, and grilled vegetables.",
+      "price": 16.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 11,
+      "name": "Shrimp Scampi",
+      "description": "Succulent shrimp sautéed in garlic butter and white wine, served over linguine pasta.",
+      "price": 26.99,
+      "image": "images/photos/placeholder-image.png"
+    }
+  ],
+  "desserts": [
+    {
+      "id": 1,
+      "name": "Baklava",
+      "description": "Sweet pastry made with layers of phyllo dough, honey, and nuts.",
+      "price": 6.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 2,
+      "name": "Galaktoboureko",
+      "description": "Greek custard pie made withsemolina, phyllo dough, and a sweet syrup.",
+      "price": 7.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 3,
+      "name": "Kunefe",
+      "description": "A traditional Middle Eastern dessert made with shredded phyllo dough, sweet cheese, and a drizzle of syrup.",
+      "price": 8.99,
+      "image": "images/photos/placeholder-image.png"
+    },
+    {
+      "id": 4,
+      "name": "Greek Yogurt with Honey",
+      "description": "Creamy Greek yogurt drizzled with honey and topped with walnuts.",
+      "price": 5.99,
+      "image": "images/photos/placeholder-image.png"
+    }
+  ]
+}
