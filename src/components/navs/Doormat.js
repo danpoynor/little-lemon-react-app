@@ -4,7 +4,6 @@ import DataLoader from "../../utilities/DataLoader";
 export default function DoormatNav() {
   const renderNavLinks = (data) => {
     // Render 'public' navlinks only
-    // TODO: Create 'admin' role navlinks
     const publicLinks = data?.filter(link => link.roles?.includes('public'));
 
     const navItem = (link) => (

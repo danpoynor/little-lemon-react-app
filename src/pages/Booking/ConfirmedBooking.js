@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 export default function ConfirmedBooking() {
   const { state } = useLocation();
   const { date, time, guests, occasion, seatingPreference } = state || {};
-  console.log('state', state);
 
   const formattedDate = new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric", timeZone: 'UTC'})
 

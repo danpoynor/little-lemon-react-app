@@ -4,10 +4,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Booking from "./pages/Booking";
+import ConfirmedBooking from "./pages/Booking/ConfirmedBooking";
 import OrderOnline from "./pages/OrderOnline";
 import Login from "./pages/Login";
 import FeedbackForm from "./components/forms/FeedbackForm";
-import ConfirmedBooking from "./pages/ConfirmedBooking";
 import NoPage from "./pages/NoPage";
 import './App.css';
 
